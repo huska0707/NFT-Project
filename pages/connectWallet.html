@@ -13,14 +13,14 @@
 
 <body onload="openWalletRequiredPopUp()">
     <aside>
-        <img src="../images/index/collection-icon.png" alt="">
+        <img src="../images/index/connect-walletimg.png" alt="" class="side-img">
     </aside>
     <main>
         <section>
             <article>
                 <div class="connect-wallet-heading">
-                    <h1>Connect Wallet</h1>
-                    <p>Connect with one of out available providers or create a new one</p>
+                    <h1>Connect wallet</h1>
+                    <p>Connect with one of out available providers or create a new one.</p>
                 </div>
                 <div class="connect-wallet-main">
                     <div class="main-crypto-title-btn">
@@ -33,57 +33,70 @@
                     <div class="crypto-group">
                         <div onclick="openSignUpOverlay()"><img src="../images/index/connect-wallet-fox-img.png"
                                 alt="">MetaMask</div>
-                        <div><img src="../images/index/connect-wallet-coinbase-img.png" alt="">Coinbase Wallet</div>
-                        <div><img src="../images/index/wallet-connect.png" alt="">WalletConnect</div>
-                        <div><img src="../images/index/connect-wallet-phantom-img.png" alt="">Phantom</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/connect-wallet-coinbase-img.png"
+                                alt="">Coinbase Wallet</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/wallet-connect.png"
+                                alt="">WalletConnect</div>
+                        <div onclick="openSignUpOverlay()"><img src="../images/index/connect-wallet-phantom-img.png"
+                                alt="">Phantom</div>
                     </div>
-                    <a href="#" class="show-more-btn">Show more</a>
+                    <a href="" class="show-more-btn">Show more</a>
                     <a href="../index.html" class="go-back-btn"><i class="fa-solid fa-arrow-left"></i>Home</a>
                 </div>
             </article>
         </section>
     </main>
-
     <div id="wallet-required">
         <section>
             <i class="fa-solid fa-close" onclick="closeWalletRequiredPopUp()"></i>
-            <h3>Wallet required</h3>
+            <h3>Wallet required!</h3>
             <img src="../images/index/ethereum-logo.png" alt="">
             <p>Get started with your Ethereum wallet to sign messages and send transactions to Ethereum blockchain</p>
-            <button id="sign-in-btn" onclick="closeWalletRequiredPopUp()">Sign in with Wallet</button>
+            <button id="sign-in-btn" onclick="closeWalletRequiredPopUp()">Sign in with wallet</button>
         </section>
     </div>
-    <div class="sign-up-overlay">
+    <div id="sign-up-overlay">
         <form action="" method="post">
             <h3>You're almost there!</h3>
-            <p class="fill-info">Choose a display name and enter your email address to receive when your NFTs sell or
-                receive offers</p>
+            <p class="fill-info">Choose a display name and enter your email address to receive updates when your NFTs
+                sell or receive offers</p>
             <input type="text" name="" id="login-input" placeholder="Display name" required onclick="fillInfo()">
-            <input type="text" name="" id="login-input" placeholder="Your email" required onclick="fillInfo()">
+            <input type="email" name="" id="login-input" placeholder="Your email" required onclick="fillInfo()">
             <span>
                 <input type="checkbox" name="" id="">
                 <p>I have read and accept the Term of service and confirm that I am at least 13 years old</p>
             </span>
-            <button id="finish-sigup-btn">Finish sign-up</button>
-            <button href="connectWallet.html" class="disconnect-btn">Disconnect</button>
+            <button id="finish-signup-btn">Finish sign-up</button>
+            <button href="connectWallet.html" class="disconnect-btn" onclick="closeSignUpOverlay()">Disconnect</button>
         </form>
     </div>
+
 
     <script>
         function openSignUpOverlay() {
             let signUpElem = document.getElementById("sign-up-overlay");
-            signUpElem.style.display = "none"
+            signUpElem.style.display = "block";
+        }
+        function closeSignUpOverlay() {
+            let signUpElem = document.getElementById("sign-up-overlay");
+            signUpElem.style.display = "none";
         }
 
+        function fillInfo() {
+            let finishSignUpElem = document.getElementById("finish-signup-btn");
+            finishSignUpElem.style.backgroundImage = `linear-gradient(to right, #F906F9,#0698F9)`;
+
+        }
+
+        function closeWalletRequiredPopUp() {
+            let hideSearchbar = document.getElementById("wallet-required");
+            hideSearchbar.style.display = "none";
+        }
         function openWalletRequiredPopUp() {
             let hideSearchbar = document.getElementById("wallet-required");
             hideSearchbar.style.display = "block";
         }
-        
-        function closeWalletRequiredPopUp() {
-            let hideSearchbar = document.getElementById("wallet-required");
-            hideSearchbar.style.display = "none"
-        }
+
     </script>
 </body>
 
