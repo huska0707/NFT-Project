@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body onload="openWalletRequiredPopUp()">
     <aside>
         <img src="../images/index/collection-icon.png" alt="">
     </aside>
@@ -44,6 +44,15 @@
         </section>
     </main>
 
+    <div id="wallet-required">
+        <section>
+            <i class="fa-solid fa-close" onclick="closeWalletRequiredPopUp()"></i>
+            <h3>Wallet required</h3>
+            <img src="../images/index/ethereum-logo.png" alt="">
+            <p>Get started with your Ethereum wallet to sign messages and send transactions to Ethereum blockchain</p>
+            <button id="sign-in-btn" onclick="closeWalletRequiredPopUp()">Sign in with Wallet</button>
+        </section>
+    </div>
     <div class="sign-up-overlay">
         <form action="" method="post">
             <h3>You're almost there!</h3>
@@ -64,6 +73,16 @@
         function openSignUpOverlay() {
             let signUpElem = document.getElementById("sign-up-overlay");
             signUpElem.style.display = "none"
+        }
+
+        function openWalletRequiredPopUp() {
+            let hideSearchbar = document.getElementById("wallet-required");
+            hideSearchbar.style.display = "block";
+        }
+        
+        function closeWalletRequiredPopUp() {
+            let hideSearchbar = document.getElementById("wallet-required");
+            hideSearchbar.style.display = "none"
         }
     </script>
 </body>
