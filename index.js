@@ -17,3 +17,20 @@ function closeSearchBar() {
   let hideSearchbar = document.getElementById("overlay");
   hideSearchbar.style.display = "none";
 }
+
+function showMarketPlaceMenu() {
+  let showMarketPlaceMenu = document.getElementById(
+    "marketplace-dropdown-content"
+  );
+  showMarketPlaceMenu.classList.toggle("showmarket-dropdown");
+}
+
+function toggleMenu() {
+  let showMarketPlaceMenu = document.getElementById("extra-dropdown-content");
+  showMarketPlaceMenu.classList.toggle("showextra-dropdown");
+}
+
+function showSidebar() {
+  let showMobNav = document.getElementById("mobile-menu");
+  showMobNav.style.display = "block";
+}
