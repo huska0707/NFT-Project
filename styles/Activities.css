@@ -1,0 +1,1136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1px;
+}
+html body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "poppins", sans-serif;
+  font-size: 16rem;
+  background-color: #e0e9f0;
+}
+html body input {
+  outline: 0;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body select {
+  outline: 0;
+  font-family: "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+html body #overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5764705882);
+  padding: 0 100px;
+}
+html body #overlay form {
+  position: relative;
+  top: 100px;
+}
+html body #overlay form #search-bar {
+  position: absolute;
+  top: 40px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 0;
+  padding: 0 50px;
+  display: block;
+  outline: none;
+}
+html body #overlay form span {
+  position: absolute;
+  font-size: 20px;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+html body #overlay form span i {
+  margin-right: 10px;
+}
+html body #mobile-menu {
+  display: none;
+}
+html body header {
+  background-color: #21204a;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
+html body header .logo {
+  font-size: 28rem;
+  font-weight: bold;
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+  color: #ffffff;
+}
+html body header nav {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body header nav .nav-list {
+  list-style-type: none;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+html body header nav .nav-list .dropdown #marketplace-dropdown {
+  cursor: pointer;
+}
+html body header nav .nav-list .dropdown .dropdown-content {
+  position: absolute;
+  top: 100px;
+  list-style-type: none;
+  display: none;
+  border: 1px solid #a6b8cf;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.7411764706);
+  padding: 5px;
+}
+html body header nav .nav-list .dropdown .dropdown-content li {
+  padding: 10px 20px;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a {
+  font-size: 15rem;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .nav-list .dropdown .dropdown-content li a:hover {
+  color: white;
+}
+html body header nav .nav-list .dropdown .dropdown-content li i {
+  margin-right: 10px;
+}
+html body header nav .nav-list .dropdown .dropdown-content .li-bottom {
+  border-bottom: 1px solid #a6b8cf;
+}
+html body header nav .nav-list .dropdown .showmarket-dropdown {
+  display: block;
+}
+html body header nav .nav-link {
+  text-decoration: none;
+  color: #a6b8cf;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+html body header nav .nav-link:hover {
+  background-color: rgba(71, 98, 133, 0.7411764706);
+}
+html body header nav .toggle-dot {
+  text-decoration: none;
+  color: #a6b8cf;
+  height: 30px;
+  font-size: 30rem;
+  padding-bottom: 60px;
+}
+html body header nav .fa-magnifying-glass {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+html body header nav .connect-wallet-btn {
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: #a6b8cf;
+}
+html body header nav .fa-bars {
+  font-size: 30rem;
+  display: none;
+  cursor: pointer;
+}
+html body main {
+  padding: 0 100rem;
+}
+html body main .activities {
+  display: flex;
+  margin-top: 60rem;
+}
+html body main .activities .active {
+  color: #11315b;
+  font-size: 20rem;
+  margin-right: 40rem;
+}
+html body main .activities .active-select {
+  font-size: 11rem;
+  border-radius: 6px;
+  background-color: #f0f4f7;
+  color: #476285;
+  border: 1px solid #6e8fa6;
+  width: 9%;
+  padding: 8rem;
+}
+html body main hr {
+  border: 1px solid #a6b8cf;
+}
+html body main .hero {
+  display: flex;
+  margin-top: 40rem;
+}
+html body main .hero .hero-left {
+  width: 30%;
+}
+html body main .hero .hero-left .filter {
+  color: #11315b;
+  font-size: 14rem;
+}
+html body main .hero .hero-left .btn {
+  padding: 16rem;
+}
+html body main .hero .hero-left .btn .btn-one {
+  font-size: 12rem;
+  padding: 6rem 20rem;
+  margin: 6rem 7rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #476285;
+  border: 1px solid #6e8fa6;
+}
+html body main .hero .hero-left label {
+  display: block;
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  padding: 4rem;
+  margin: 12rem 2rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #476285;
+  border: 1px solid #6e8fa6;
+}
+html body main .hero .hero-left label input {
+  width: 100%;
+  border: none;
+  font-size: 12rem;
+  padding: 8rem;
+}
+html body main .hero .hero-left .input-one {
+  display: block;
+  width: 100%;
+  height: 5vh;
+  padding: 4rem;
+  margin: 12rem 2rem;
+  background-color: #bbd9eb;
+  color: #6e8fa6;
+  border-radius: 10px;
+  border: none;
+}
+html body main .hero .hero-right {
+  width: 60%;
+  margin: 0 120rem;
+}
+html body main .hero .hero-right .images {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem 20rem;
+}
+html body main .hero .hero-right .images .text {
+  display: flex;
+}
+html body main .hero .hero-right .images .text .img {
+  width: 80rem;
+  height: 80rem;
+  padding: 10rem;
+}
+html body main .hero .hero-right .images .text .border {
+  border-radius: 18px;
+  border: none;
+}
+html body main .hero .hero-right .images .text .small-text {
+  font-size: 12rem;
+  margin: 24rem 12rem;
+  color: #11315b;
+}
+html body main .hero .hero-right .images .text .small-text .time {
+  display: flex;
+  font-size: 11rem;
+  margin: 6rem 0;
+  color: #476285;
+}
+html body main .hero .hero-right .images .text .small-text .time .vector {
+  background-color: #a6b8cf;
+  border-radius: 18rem;
+}
+html body main .hero .hero-right .images .text .small-text .time .timep {
+  padding-top: 3rem;
+  margin: 0 6rem;
+}
+html body main .hero .hero-right .color {
+  background-color: #ffffff;
+  border-radius: 16rem;
+}
+html body main .hero .hero-right button {
+  border-radius: 10rem;
+  background-color: #f0f4f7;
+  color: #6e8fa6;
+  border: 1px solid #6e8fa6;
+  margin: 30rem 30rem;
+  padding: 0 16rem;
+  font-size: 14rem;
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+  html body {
+    max-width: 1024x;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 50px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 700px;
+  }
+  html body header nav div {
+    width: 150px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body main {
+    padding: 0 80rem;
+  }
+  html body main .activities {
+    display: flex;
+    margin-top: 60rem;
+  }
+  html body main .activities .active {
+    color: #11315b;
+    font-size: 20rem;
+    margin-right: 40rem;
+  }
+  html body main .activities .active-select {
+    font-size: 10rem;
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+    width: 11%;
+    padding: 8rem;
+  }
+  html body main hr {
+    border: 1px solid #a6b8cf;
+  }
+  html body main .hero {
+    display: flex;
+    margin-top: 18rem;
+  }
+  html body main .hero .hero-left {
+    width: 30%;
+  }
+  html body main .hero .hero-left .filter {
+    color: #11315b;
+    font-size: 14rem;
+    margin: 8rem 0;
+  }
+  html body main .hero .hero-left .btn .btn-one {
+    font-size: 12rem;
+    padding: 6rem 18rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left label {
+    display: block;
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    padding: 5rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left input {
+    font-size: 13rem;
+    padding: 6rem;
+  }
+  html body main .hero .hero-left .input-one {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    padding: 4rem;
+    margin: 12rem 2rem;
+    background-color: #bbd9eb;
+    color: #6e8fa6;
+    border-radius: 10px;
+    border: none;
+    font-size: 13rem;
+  }
+  html body main .hero .hero-right {
+    width: 70%;
+    margin: 0 60rem;
+  }
+  html body main .hero .hero-right .images {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text .img {
+    width: 80rem;
+    height: 80rem;
+  }
+  html body main .hero .hero-right .images .text .border {
+    border-radius: 18px;
+    border: none;
+  }
+  html body main .hero .hero-right .images .text .small-text {
+    font-size: 10rem;
+    margin: 24rem 12rem;
+    color: #11315b;
+  }
+  html body main .hero .hero-right .images .text .small-text .time {
+    display: flex;
+    font-size: 8rem;
+    margin: 6rem 0;
+    color: #476285;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .vector {
+    background-color: #a6b8cf;
+    border-radius: 18rem;
+    width: 16rem;
+    height: 16rem;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .timep {
+    padding-top: 2rem;
+    margin: 0 6rem;
+  }
+  html body main .hero .hero-right .color {
+    background-color: #ffffff;
+    border-radius: 16rem;
+  }
+  html body main .hero .hero-right button {
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #6e8fa6;
+    border: 1px solid #6e8fa6;
+    margin: 30rem 26rem;
+    padding: 0 18rem;
+    font-size: 12rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 995px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 995px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 30px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 300px;
+  }
+  html body header nav .nav-link {
+    display: none;
+  }
+  html body header nav div {
+    width: 200px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+    margin-left: 10px;
+  }
+  html body main {
+    padding: 0 40rem;
+  }
+  html body main .activities {
+    display: flex;
+    margin-top: 60rem;
+  }
+  html body main .activities .active {
+    color: #11315b;
+    font-size: 20rem;
+    margin-right: 40rem;
+  }
+  html body main .activities .active-select {
+    font-size: 10rem;
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+    width: 13%;
+    padding: 8rem;
+  }
+  html body main hr {
+    border: 1px solid #a6b8cf;
+  }
+  html body main .hero {
+    display: flex;
+    margin-top: 18rem;
+  }
+  html body main .hero .hero-left {
+    width: 30%;
+  }
+  html body main .hero .hero-left .filter {
+    color: #11315b;
+    font-size: 14rem;
+    margin: 8rem 0;
+  }
+  html body main .hero .hero-left .btn .btn-one {
+    font-size: 12rem;
+    padding: 6rem 18rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left label {
+    display: block;
+    display: flex;
+    width: 100%;
+    height: 6vh;
+    padding: 5rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left input {
+    font-size: 13rem;
+    padding: 6rem;
+  }
+  html body main .hero .hero-left .input-one {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    padding: 4rem;
+    margin: 12rem 2rem;
+    background-color: #bbd9eb;
+    color: #6e8fa6;
+    border-radius: 10px;
+    border: none;
+    font-size: 13rem;
+  }
+  html body main .hero .hero-right {
+    width: 70%;
+    margin: 0 30rem;
+  }
+  html body main .hero .hero-right .images {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text .img {
+    width: 75rem;
+    height: 75rem;
+  }
+  html body main .hero .hero-right .images .text .border {
+    border-radius: 18px;
+    border: none;
+  }
+  html body main .hero .hero-right .images .text .small-text {
+    font-size: 10rem;
+    margin: 20rem 12rem;
+    color: #11315b;
+  }
+  html body main .hero .hero-right .images .text .small-text .time {
+    display: flex;
+    font-size: 8rem;
+    margin: 4rem 0;
+    color: #476285;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .vector {
+    background-color: #a6b8cf;
+    border-radius: 18rem;
+    width: 16rem;
+    height: 16rem;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .timep {
+    padding-top: 2rem;
+    margin: 0 6rem;
+  }
+  html body main .hero .hero-right .color {
+    background-color: #ffffff;
+    border-radius: 16rem;
+  }
+  html body main .hero .hero-right button {
+    border-radius: 6rem;
+    background-color: #f0f4f7;
+    color: #6e8fa6;
+    border: 1px solid #6e8fa6;
+    margin: 28rem 26rem;
+    padding: 0 18rem;
+    font-size: 10rem;
+  }
+}
+@media screen and (min-width: 591px) and (max-width: 767px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 767px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 20px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav div {
+    width: 130px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body main {
+    padding: 0 20rem;
+  }
+  html body main .activities {
+    display: flex;
+    margin-top: 60rem;
+  }
+  html body main .activities .active {
+    color: #11315b;
+    font-size: 20rem;
+    margin-right: 40rem;
+  }
+  html body main .activities .active-select {
+    font-size: 10rem;
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+    width: 18%;
+    padding: 8rem;
+  }
+  html body main hr {
+    border: 1px solid #a6b8cf;
+  }
+  html body main .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 18rem;
+  }
+  html body main .hero .hero-left {
+    width: 60%;
+    margin: 20rem 0;
+  }
+  html body main .hero .hero-left .filter {
+    color: #11315b;
+    font-size: 14rem;
+    margin: 8rem 0;
+  }
+  html body main .hero .hero-left .btn .btn-one {
+    font-size: 12rem;
+    padding: 6rem 18rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left label {
+    display: block;
+    display: flex;
+    width: 94%;
+    height: 6vh;
+    padding: 5rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left input {
+    font-size: 13rem;
+    padding: 6rem;
+  }
+  html body main .hero .hero-left .input-one {
+    display: block;
+    width: 94%;
+    height: 6vh;
+    padding: 4rem;
+    margin: 12rem 2rem;
+    background-color: #bbd9eb;
+    color: #6e8fa6;
+    border-radius: 10px;
+    border: none;
+    font-size: 13rem;
+  }
+  html body main .hero .hero-right {
+    width: 100%;
+    margin: 0 10rem;
+  }
+  html body main .hero .hero-right .images {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text .img {
+    width: 80rem;
+    height: 80rem;
+  }
+  html body main .hero .hero-right .images .text .border {
+    border-radius: 18px;
+    border: none;
+  }
+  html body main .hero .hero-right .images .text .small-text {
+    font-size: 12rem;
+    margin: 26rem 12rem;
+    color: #11315b;
+  }
+  html body main .hero .hero-right .images .text .small-text .time {
+    display: flex;
+    font-size: 10rem;
+    margin: 4rem 0;
+    color: #476285;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .vector {
+    background-color: #a6b8cf;
+    border-radius: 18rem;
+    width: 16rem;
+    height: 16rem;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .timep {
+    padding-top: 2rem;
+    margin: 0 6rem;
+  }
+  html body main .hero .hero-right .color {
+    background-color: #ffffff;
+    border-radius: 16rem;
+  }
+  html body main .hero .hero-right button {
+    width: 16%;
+    height: 14%;
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #6e8fa6;
+    border: 1px solid #6e8fa6;
+    margin: 28rem 26rem;
+    font-size: 14rem;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 590px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 590px;
+    font-size: 15rem;
+  }
+  html body header {
+    padding: 0 20px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 300px;
+  }
+  html body header nav .nav-link {
+    display: none;
+  }
+  html body header nav div {
+    width: 200px;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+    margin-left: 10px;
+  }
+  html body main {
+    padding: 0 20rem;
+  }
+  html body main .activities {
+    display: flex;
+    margin-top: 60rem;
+  }
+  html body main .activities .active {
+    color: #11315b;
+    font-size: 20rem;
+    margin-right: 26rem;
+  }
+  html body main .activities .active-select {
+    font-size: 10rem;
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+    width: 24%;
+    padding: 8rem;
+  }
+  html body main hr {
+    border: 1px solid #a6b8cf;
+  }
+  html body main .hero {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 18rem;
+  }
+  html body main .hero .hero-left {
+    width: 60%;
+    margin: 50rem 0;
+  }
+  html body main .hero .hero-left .filter {
+    color: #11315b;
+    font-size: 14rem;
+    margin: 8rem 0;
+  }
+  html body main .hero .hero-left .btn .btn-one {
+    font-size: 12rem;
+    padding: 6rem 18rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left label {
+    display: block;
+    display: flex;
+    width: 94%;
+    height: 6vh;
+    padding: 5rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left input {
+    font-size: 13rem;
+    padding: 6rem;
+  }
+  html body main .hero .hero-left .input-one {
+    display: block;
+    width: 94%;
+    height: 6vh;
+    padding: 4rem;
+    margin: 12rem 2rem;
+    background-color: #bbd9eb;
+    color: #6e8fa6;
+    border-radius: 10px;
+    border: none;
+    font-size: 13rem;
+  }
+  html body main .hero .hero-right {
+    width: 100%;
+    margin: 0 4rem;
+  }
+  html body main .hero .hero-right .images {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text .img {
+    width: 80rem;
+    height: 80rem;
+  }
+  html body main .hero .hero-right .images .text .border {
+    border-radius: 18px;
+    border: none;
+  }
+  html body main .hero .hero-right .images .text .small-text {
+    font-size: 9rem;
+    margin: 26rem 8rem;
+    color: #11315b;
+  }
+  html body main .hero .hero-right .images .text .small-text .time {
+    display: flex;
+    font-size: 9rem;
+    margin: 4rem 0;
+    color: #476285;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .vector {
+    background-color: #a6b8cf;
+    border-radius: 18rem;
+    width: 16rem;
+    height: 16rem;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .timep {
+    padding-top: 2rem;
+    margin: 0 4rem;
+  }
+  html body main .hero .hero-right .color {
+    background-color: #ffffff;
+    border-radius: 16rem;
+  }
+  html body main .hero .hero-right button {
+    border-radius: 6rem;
+    background-color: #f0f4f7;
+    color: #6e8fa6;
+    border: 1px solid #6e8fa6;
+    margin: 30rem 8rem;
+    padding: 0 12rem;
+    font-size: 12rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  html {
+    font-size: 1px;
+  }
+  html body {
+    overflow: none;
+    max-width: 375px;
+    font-size: 15rem;
+  }
+  html body #mobile-menu {
+    height: 100vh;
+    width: 300px;
+    background-color: #e0e9f0;
+    position: fixed;
+    z-index: 29;
+    right: 0;
+    display: none;
+  }
+  html body #close-btn {
+    font-size: 20rem;
+    color: red;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  html body #close-btn .fa-close {
+    margin-right: 5px;
+  }
+  html body .mobile-menu-content {
+    padding-top: 30px;
+    list-style: none;
+  }
+  html body .mobile-menu-content .mobile-menu-links {
+    font-size: 20rem;
+    text-decoration: none;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .mobile-menu-content .mobile-menu-links:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body .mobile-menu-content .mobile-menu-links:active {
+    color: white;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown {
+    cursor: pointer;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content {
+    display: none;
+    list-style: none;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content a {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content a i {
+    margin-right: 15px;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .dropdown-content a:hover {
+    background-color: rgba(71, 98, 133, 0.7411764706);
+    color: white;
+  }
+  html body .mobile-menu-content .mobile-menu-links .dropdown .showMobmarket-dropdown {
+    display: block;
+  }
+  html body #overlay {
+    padding: 0 10px;
+  }
+  html body #overlay form {
+    display: flex;
+    justify-content: center;
+  }
+  html body #overlay form #search-bar {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+  }
+  html body header {
+    padding: 0 10px;
+    height: 80px;
+  }
+  html body header nav {
+    width: 250px;
+  }
+  html body header nav .nav-list {
+    display: none;
+  }
+  html body header nav .connect-wallet-btn {
+    padding: 8px;
+  }
+  html body header nav .fa-bars {
+    display: block;
+  }
+  html body main {
+    padding: 0 10rem;
+  }
+  html body main .activities {
+    display: flex;
+    margin-top: 60rem;
+  }
+  html body main .activities .active {
+    color: #11315b;
+    font-size: 20rem;
+    margin-right: 20rem;
+  }
+  html body main .activities .active-select {
+    font-size: 10rem;
+    border-radius: 6px;
+    background-color: #f0f4f7;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+    width: 32%;
+    padding: 8rem;
+  }
+  html body main hr {
+    border: 1px solid #a6b8cf;
+  }
+  html body main .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 18rem;
+  }
+  html body main .hero .hero-left {
+    width: 68%;
+    margin: 20rem 0;
+  }
+  html body main .hero .hero-left .filter {
+    color: #11315b;
+    font-size: 14rem;
+    margin: 8rem 0;
+  }
+  html body main .hero .hero-left .btn .btn-one {
+    font-size: 12rem;
+    padding: 6rem 16rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left label {
+    display: block;
+    display: flex;
+    width: 94%;
+    height: 6vh;
+    padding: 5rem;
+    margin: 10rem 2rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #476285;
+    border: 1px solid #6e8fa6;
+  }
+  html body main .hero .hero-left input {
+    font-size: 10rem;
+    padding: 2rem;
+  }
+  html body main .hero .hero-left .input-one {
+    display: block;
+    width: 94%;
+    height: 6vh;
+    padding: 4rem;
+    margin: 12rem 2rem;
+    background-color: #bbd9eb;
+    color: #6e8fa6;
+    border-radius: 10px;
+    border: none;
+    font-size: 13rem;
+  }
+  html body main .hero .hero-right {
+    width: 100%;
+    margin: 0 6rem;
+  }
+  html body main .hero .hero-right .images {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text {
+    display: flex;
+  }
+  html body main .hero .hero-right .images .text .img {
+    width: 60rem;
+    height: 60rem;
+  }
+  html body main .hero .hero-right .images .text .border {
+    border-radius: 16px;
+    border: none;
+  }
+  html body main .hero .hero-right .images .text .small-text {
+    font-size: 6rem;
+    margin: 20rem 8rem;
+    color: #11315b;
+  }
+  html body main .hero .hero-right .images .text .small-text .time {
+    display: flex;
+    font-size: 6rem;
+    margin: 2rem 0;
+    color: #476285;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .vector {
+    background-color: #a6b8cf;
+    border-radius: 18rem;
+    width: 14rem;
+    height: 14rem;
+  }
+  html body main .hero .hero-right .images .text .small-text .time .timep {
+    padding-top: 2rem;
+    margin: 0 2rem;
+  }
+  html body main .hero .hero-right .color {
+    background-color: #ffffff;
+    border-radius: 16rem;
+  }
+  html body main .hero .hero-right button {
+    border-radius: 4rem;
+    background-color: #f0f4f7;
+    color: #6e8fa6;
+    border: 1px solid #6e8fa6;
+    margin: 30rem 4rem;
+    padding: 0 12rem;
+    font-size: 8rem;
+  }
+}/*# sourceMappingURL=Activities.css.map */
