@@ -1,0 +1,32 @@
+//reset css
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+
+//variables
+$bg-color: #21204A;
+$font-color: white;
+$font-color2: #a6b8cf;
+$main-bg-color: #e0e9f0;
+$inside-flex-item-bg-color:#f0f4f7;
+$font-type: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+html {
+    
+
+    body {
+
+        .showMobmarket-dropdown{
+            display: block;
+        }
+
+    }
+}
+
+
+    
