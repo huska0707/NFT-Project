@@ -18,4 +18,24 @@
             <input type="search" placeholder="Input text" id="search-bar">
         </form>
     </div>
+    <section id="mobile-menu">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>Close
+        </span>
+        <ul class="mobile-menu-content">
+            <li><a href="./index.html" class="mobile-menu-links">Home</a></li>
+            <li class="dropdown">
+                <span class="mobile-menu-links" id="marketplace-dropdown2" onclick="showMobileMarketDropdown()">Market
+                    Place</span>
+                <ul class="dropdown-content" id="mobile-marketplace-dropdown-content2">
+                    <li class="li-bottom"><a href="./pages/collection.html"><i class="fa-solid fa-layer-group"></i>
+                            Collections</a></li>
+                    <li><a href="./pages/artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                </ul>
+            </li>
+            <li><a href="./pages/" class="mobile-menu-links">All NFTs</a></li>
+            <li><a href="./pages/Activities.html" class="mobile-menu-links">Activities</a></li>
+            <li><a href="" class="mobile-menu-links">Sign Up</a></li>
+        </ul>
+    </section>
 </body>
