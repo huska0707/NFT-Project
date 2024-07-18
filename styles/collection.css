@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html body .showMobmarket-dropdown {
+  display: block;
+}/*# sourceMappingURL=collection.css.map */
