@@ -1,0 +1,605 @@
+//reset css
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+
+//variables
+$bg-color: #21204A;
+$font-color: white;
+$font-color2: #a6b8cf;
+$main-bg-color: #e0e9f0;
+$inside-flex-item-bg-color: #f0f4f7;
+$font-type: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+html {
+    font-size: 1px;
+
+    body {
+        font-size: 16rem;
+        // color: $font-color;
+        font-family: poppins, "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: $bg-color;
+        background-color: $main-bg-color;
+
+        header {
+            background-color: $bg-color;
+            padding: 0 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            position: sticky;
+            top: 0;
+            z-index: 11;
+
+            .logo {
+                font-size: 28rem;
+                font-weight: bold;
+                border: 3px solid white;
+                border-radius: 10px;
+                padding: 0 10px;
+                color: white;
+            }
+
+            nav {
+                width: 900px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 170px;
+                }
+
+                .nav-list {
+                    list-style-type: none;
+                    width: 500px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .dropdown {
+
+                        .dropdown-content {
+                            position: absolute;
+                            top: 100px;
+                            list-style-type: none;
+                            display: none;
+                            border: 1px solid $font-color2;
+                            border-radius: 15px;
+                            background-color: #000000bd;
+                            padding: 5px;
+
+
+                            li {
+                                padding: 10px 20px;
+
+                                a {
+                                    text-decoration: none;
+                                    color: $font-color2;
+                                }
+
+                                i {
+                                    margin-right: 10px;
+                                }
+                            }
+
+                            .li-bottom {
+                                border-bottom: 1px solid $font-color2;
+
+                            }
+                        }
+                        .showmarket-dropdown{
+                            display: block;
+                        }
+                    }  
+                }
+
+                .nav-link {
+                    text-decoration: none;
+                    color: $font-color2;
+                    border-radius: 10px;
+                    padding: 5px 20px;
+                    // position: relative;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #476285bd;
+                        // border: 1px solid #8897ac;
+                    }
+                }
+
+                
+
+                .toggle-dot {
+                    text-decoration: none;
+                    color: $font-color2;
+                    height: 30px;
+                    font-size: 30rem;
+                    padding-bottom: 60px;
+                    // border: 1px solid white;
+                }
+
+                .fa-magnifying-glass {
+                    padding: 5px 10px;
+                }
+
+                // Need to do work on this later on
+                #search-menu {
+                    display: none;
+                    position: relative;
+                    left: 0;
+                    height: 1200px;
+                    width: 1345px;
+                    // display: block;
+                    background-color: #0000006c;
+
+                    #search-bar {
+                        position: absolute;
+                        left: 100px;
+                        top: 100px;
+                        // z-index: 20;
+                        height: 50px;
+                        width: 1150px;
+                        border-radius: 10px;
+                        border: 0;
+                    }
+                }
+
+                .connect-wallet-btn {
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    padding: 10px;
+                    text-decoration: none;
+                    margin: 0 20px;
+                    color: $font-color2;
+                }
+
+                .fa-bars {
+                    color: white;
+                    font-size: 30rem;
+                    display: none;
+                }
+            }
+        }
+
+        main {
+
+            .list-item {
+                display: flex;
+                padding: 100px;
+
+                .list-item-left {
+                    width: 35%;
+                    margin-top: 80px;
+
+                    .list-item-flex-box {
+                        padding: 10px;
+                        margin-top: 20px;
+                        // border: 1px solid red;
+                        width: 340px;
+                        background-color: $inside-flex-item-bg-color;
+                        border-radius: 10px;
+
+                        img {
+                            width: 320px;
+                            height: 200px;
+                            border-radius: 10px;
+
+                        }
+
+                        .price-info {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px 15px;
+                            background-color: $main-bg-color;
+
+                            border-radius: 10px;
+                        }
+
+                        h2 {
+                            font-size: 20rem;
+                        }
+
+                        p {
+                            color: $font-color2;
+
+                        }
+                    }
+                }
+
+                .list-item-right {
+                    width: 65%;
+
+                    h1 {
+                        margin-bottom: 28px;
+                        font-size: 40rem;
+                        height: 47px;
+                    }
+
+                    .fix-price-flex-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin: 24px 0;
+
+                        .fix-price-flex-item {
+                            background-color: $bg-color;
+                            color: white;
+                            width: 164px;
+                            height: 126px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                            margin-right: 30px;
+                        }
+                    }
+
+                    .top-sale-price {
+
+                        .top-sale-price-top {
+
+                            select {
+                                height: 48px;
+                                width: 82px;
+                                border-radius: 10px;
+                                border: 2px solid $font-color2;
+                            }
+
+                            input[type="text"] {
+                                width: 466px;
+                                height: 48px;
+                                border-radius: 10px;
+                                outline: 0;
+                                border: 2px solid $font-color2;
+                                padding: 10px;
+                            }
+                        }
+
+                        .top-sale-price-bottom {
+                            margin-top: 20px;
+                            
+
+                            input {
+                                width: 556px;
+                                height: 48px;
+                                outline: 0;
+                                border: 2px solid $font-color2;
+                                padding: 10px;
+                                border-radius: 10px;
+                                display: block;
+                            }
+
+                            button {
+                                width: 198px;
+                                height: 48px;
+                                background-image: linear-gradient(to right, #0698F9, #F906F9);
+                                border: 0;
+                                border-radius: 10px;
+                                color: white;
+                                font-size: 20rem;
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 996px) and (max-width: 1200px) {
+    html {
+        font-size: 1px;
+
+        body {
+            max-width: 1024x;
+            font-size: 15rem;
+
+            header {
+                padding: 0 50px;
+                height: 80px;
+
+                nav {
+                    // border: 1px solid white;
+                    width: 700px;
+
+                    div {
+                        width: 150px;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+                }
+            }
+
+            main {
+
+                .list-item {
+                    padding: 20px;
+
+                    .list-item-left {
+                        width: 40%;
+                    }
+
+                    .list-item-right {
+                        width: 60%;
+
+                        .fix-price-flex-container {
+
+                            .fix-price-flex-item {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 995px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 30px;
+                height: 80px;
+
+                nav {
+                    width: 300px;
+
+                    .nav-link {
+                        display: none;
+                    }
+
+                    div {
+                        width: 200px;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            main {
+
+                .list-item {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 30px;
+
+                    .list-item-left {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 30px;
+
+                        h3{
+                            font-size: 30rem;
+                        }
+                    }
+
+                    .list-item-right {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 30px;
+                        
+                        h1{
+                            font-size: 30rem;
+                            margin-bottom: 15px;
+                        }
+
+                        .fix-price-flex-container {
+                            display: flex;
+                            justify-content: center;
+
+                            .fix-price-flex-item {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 591px) and (max-width: 767px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+            header {
+                padding: 0 20px;
+                height: 80px;
+
+                nav {
+                    width: 300px;
+
+                    .nav-link {
+                        display: none;
+                    }
+
+                    div {
+                        width: 200px;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            main {
+
+                .list-item {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 30px;
+
+                    .list-item-left {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 30px;
+
+                        h3{
+                            font-size: 30rem;
+                        }
+                    }
+
+                    .list-item-right {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .fix-price-flex-container {
+                            display: flex;
+                            justify-content: center;
+
+                            .fix-price-flex-item {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 180px) and (max-width: 590px) {
+    html {
+        font-size: 1px;
+
+        body {
+            overflow: none;
+            max-width: 995px;
+            font-size: 15rem;
+
+
+            header {
+                padding: 0 20px;
+                height: 80px;
+
+                nav {
+                    width: 300px;
+
+                    .nav-link {
+                        display: none;
+                    }
+
+                    div {
+                        width: 200px;
+                    }
+
+                    .connect-wallet-btn {
+                        padding: 8px;
+                    }
+
+                    .fa-bars {
+                        display: block;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            main {
+
+                .list-item {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 30px;
+
+                    .list-item-left {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 30px;
+
+                        h3{
+                            font-size: 30rem;
+                        }
+                    }
+
+                    .list-item-right {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 30px;
+
+                        h1{
+                            font-size: 30rem;
+                            margin-bottom: 15px;
+                        }
+
+                        .fix-price-flex-container {
+                            display: flex;
+                            justify-content: center;
+
+                            .fix-price-flex-item {
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .top-sale-price {
+
+                            .top-sale-price-top {
+    
+                                input[type="text"] {
+                                    width: 366px;
+                                }
+                            }
+    
+                            .top-sale-price-bottom {
+                                margin-top: 20px;
+                                
+    
+                                input {
+                                    width: 300px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
