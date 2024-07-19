@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404</title>
+    <link rel="stylesheet" href="../styles/errorpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- This is for the mobile menu -->
+    <section id="mobile-menu">
+        <span id="close-btn" onclick="closeSideNavBar()">
+            <i class="fa-solid fa-close "></i>
+        </span>
+        <div class="mobile-menu-content">
+            <a href="../index.html" class="mobile-menu-links">Home</a>
+            <a href="" class="mobile-menu-links">Market Place</a>
+            <a href="./nftOfArtist.html" class="mobile-menu-links">All NFTs</a>
+            <a href="./Activities.html" class="mobile-menu-links">Activities</a>
+            <a href="" class="mobile-menu-links">Sign Up</a>
+        </div>
+    </section>
+
+    <header>
+        <span class="logo">M</span>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <span class="nav-link" id="marketplace-dropdown" onclick="showMarketPlaceMenu()">Market Place</span>
+                    <ul class="dropdown-content" id="marketplace-dropdown-content">
+                        <li class="li-bottom"><a href="./collection.html"><i class="fa-solid fa-layer-group"></i>
+                                Collections</a></li>
+                        <li><a href="./artist.html"><i class="fa-solid fa-user-group"></i>Artists</a></li>
+                    </ul>
+                </li>
+                <li><a href="./nftOfArtist.html" class="nav-link">All NFTs</a></li>
+                <li><a href="./Activities.html" class="nav-link">Activities</a></li>
+
+            </ul>
+            <span href="" class="toggle-dot" onclick="toggleBtnMenu()">...</span>
+            <div class="extra-dropdown">
+                <ul class="extra-dropdown-content" id="extra-dropdown-content">
+                    <li><a href="./artistRegister.html">Artist Register</a></li>
+                    <li><a href="./errorpage.html">Error Page</a></li>
+                    <li><a href="./userPro5.html">Profile settings</a></li>
+                    <li><a href="./userPage.html">Userpage</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-magnifying-glass" id="fa-magnifying-glass"></i>
+            <a href="./connectWallet.html" class="connect-wallet-btn">Connect wallet</a>
+            <i class="fa-solid fa-bars" onclick="showSideNav()"></i>
+        </nav>
+    </header>
+    <main>
+        <section class="left">
+            <div class="darkbackground"></div>
+            <img src="../images/index/error404-img.png" alt="">
+        </section>
+        <section class="right">
+            <h1>404</h1>
+            <h2>This page is lost</h2>
+            <p>We've explored deep and wide,<br> but we can't find the page you're looking for</p>
+            <a href="../index.html" class="navigate-btn">Navigate back home</a>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-left">
+            <div><span>M</span><a href="index.html">MyNFT.com</a></div>
+            <p>The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs).
+                Buy, sell, and discover exclusive digital items.</p>
+        </section>
+        <section class="footer-right">
+            <ul>
+                <h3>Market Place</h3>
+                <li><a href="" class="footer-nav-links">Explore</a></li>
+                <li><a href="" class="footer-nav-links">How it works</a></li>
+                <li><a href="" class="footer-nav-links">Jobs</a></li>
+                <li><a href="" class="footer-nav-links">Help center</a></li>
+                <li><a href="" class="footer-nav-links">Blogs</a></li>
+            </ul>
+            <ul>
+                <h3>Company</h3>
+                <li><a href="" class="footer-nav-links">About Us</a></li>
+                <li><a href="" class="footer-nav-links">Contact Us</a></li>
+                <li><a href="" class="footer-nav-links">Feature</a></li>
+                <li><a href="" class="footer-nav-links">Discover</a></li>
+            </ul>
+            <div class="newsletter-section">
+                <h3>Get our latest updates</h3>
+                <form action="">
+                    <input type="email" name="" id="" placeholder="Your email">
+                    <button class="subscribe-btn">Subscribe</button>
+                </form>
+                <span>
+                    <h3>Join our community</h3>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </span>
+            </div>
+        </section>
+    </footer>
+
+    <script src="../index.js"></script>
+</body>
+
+</html>
